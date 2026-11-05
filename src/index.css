@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(150, 150, 150, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(150, 150, 150, 0.45);
+}
+
+/* Notion-like typography enhancements */
+.notion-prose {
+  color: #37352F;
+}
+
+.dark .notion-prose {
+  color: #D4D4D4;
+}
+
+/* Table styles */
+.markdown-content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.markdown-content th {
+  background-color: #F7F6F3;
+  color: #37352F;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.625rem 0.875rem;
+  border-bottom: 1px solid #E8E8E6;
+}
+
+.dark .markdown-content th {
+  background-color: #222222;
+  color: #E6E6E6;
+  border-bottom: 1px solid #333333;
+}
+
+.markdown-content td {
+  padding: 0.625rem 0.875rem;
+  border-bottom: 1px solid #F0F0EE;
+  vertical-align: top;
+}
+
+.dark .markdown-content td {
+  border-bottom: 1px solid #282828;
+}
+
+.markdown-content tr:last-child td {
+  border-bottom: none;
+}
+
+.markdown-content tr:hover td {
+  background-color: rgba(0, 0, 0, 0.015);
+}
+
+.dark .markdown-content tr:hover td {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
